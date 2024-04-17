@@ -174,7 +174,7 @@ Module.register("MMM-HA", {
     } else if (entityId.startsWith("switch.")) {
       return "switch";
     } else {
-      return "unknown";
+      return "unknown.";
     }
   }
 });
