@@ -1,5 +1,7 @@
 # MMM-HA
-Fork from # MMM-HomeAssstant - WIP - TESTING - hobbyist
+Fork from # MMM-HomeAssstant  - https://github.com/zuo000/MMM-HomeAssistant  -credits 
+
+WIP - TESTING - hobbyist
 css changes  - Lights and Switches tiles change color when turned on - flips as well as a visual indicator  
 
 HomeAssistant frontend module for [MagicMirror²](https://github.com/MichMich/MagicMirror).
