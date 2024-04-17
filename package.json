@@ -1,0 +1,14 @@
+{
+    "name": "MMM-HA",
+    "version": "1.0.0",
+    "description": "MagicMirror² module for integrating with Home Assistant",
+    "main": "MMM-HA.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "FaiekA",
+    "license": "MIT",
+    "dependencies": {
+      "request": "^2.88.2"
+    }
+  }

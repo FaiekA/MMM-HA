@@ -1,27 +1,34 @@
-# MMM-HomeAssistant
+# MMM-HA
+Fork from # MMM-HomeAssstant - WIP - TESTING - hobbyist
+css changes  - Lights and Switches tiles change color when turned on - flips as well as a visual indicator  
+
 HomeAssistant frontend module for [MagicMirror²](https://github.com/MichMich/MagicMirror).
 
-![ScreenShot](screenshot.jpg?raw=true "ScreenShot")
+![ScreenShot](screenshot.png?raw=true "ScreenShot")
 
 ## Installation
 
 1. Navigate into your MagicMirror `modules` folder and execute<br>
-`git clone https://github.com/zuo000/MMM-HomeAssistant.git`.
-2. Enter the new `MMM-HomeAssistant` directory and execute `npm install`.
+`git clone https://github.com/xxxxxxxxxxxx`.
+2. Enter the new `MMM-HA` directory and execute `npm install`.
 
 ## Configuration
 
 ```
-{
-  module: "MMM-HomeAssistant",
-  position: "middle_center",
-  config: {
-    host: "YOUR_HA_IP or DOMAIN",
-    port: 8123, // your HA port, 8123 by default.
-    accessToken: "SUPER SECRET!!!",
-    updateInterval: 5*1000
-  }
-},
+		{
+			module: "MMM-HA",
+			position: "center",
+			config: {
+			  host: "<192.168.0.1>",
+			  port: 8123,
+			  accessToken: "",
+			  entities: [""
+
+						],
+			  mediaPlayerEntities: ["",			  			
+					]
+			}   
+		  },
 ```
 ## The MIT License (MIT)
 

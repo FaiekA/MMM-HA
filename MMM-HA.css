@@ -17,8 +17,8 @@
   width: 150px;
   height: 100px;
   overflow: hidden;
-  position: relative; /* Add position relative for child elements */
-  cursor: pointer; /* Add cursor pointer to indicate clickable */
+  position: relative; 
+  cursor: pointer; 
 }
 
 /* Flip animation */
@@ -114,7 +114,7 @@
   text-align: right;
 }
 
-/* Adjustments for consistent spacing */
+
 .group:not(:last-child) {
   margin-right: 20px;
 }

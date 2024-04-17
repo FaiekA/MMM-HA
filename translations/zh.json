@@ -1,5 +1,7 @@
 {
-	"on": "打开",
-	"off": "关闭",
-  "someone moving": "有人移动"
+	"on": "On",
+	"off": "Off",
+  "someone moving": "Motion",
+  "Off" : "False",
+  "False" : "Off"
 }
