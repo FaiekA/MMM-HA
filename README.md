@@ -7,7 +7,8 @@ css changes  - Lights and Switches tiles change color when turned on - flips as 
 
 HomeAssistant frontend module for [MagicMirror²](https://github.com/MichMich/MagicMirror).
 
-![ScreenShot](screenshot.png?raw=true "ScreenShot")
+![Screenshot 2024-04-17 154253](https://github.com/FaiekA/MMM-HA/assets/52759676/568837e8-8633-40da-bcce-a1844de21763)
+
 
 ## Installation
 
