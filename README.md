@@ -4,8 +4,10 @@ Fork from # MMM-HomeAssstant  - https://github.com/zuo000/MMM-HomeAssistant  -cr
 WIP - TESTING - hobbyist.
 
 css changes  - Lights and Switches tiles change color when turned on - flips as well as a visual indicator 
+
 Issues : CSS in diffent regions
 	 Media player entity image 
+
 To Do  : Add entity - covers
 
 HomeAssistant frontend module for [MagicMirror²](https://github.com/MichMich/MagicMirror).
