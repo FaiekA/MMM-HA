@@ -1,6 +1,10 @@
 {
 	"on": "On",
 	"off": "Off",
-  "someone moving": "Motion",
-  "Off" : "False",
+    "someone moving": "Motion",
+    "com.disneyplus.mea": "Disney+",
+	"com.google.android.youtube.tv": "YouTube",
+	"unavailable": "Off",
+	"com.google.android.tvlauncher": "Main Menu",
+	"com.google.android.apps.tv.launcherx":"Main Menu"
 }

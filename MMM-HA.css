@@ -1,12 +1,16 @@
+
 .wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Allow tiles to wrap to the next line */
+  justify-content: flex-start; /* Align tiles at the start of the container */
+  align-items: flex-start; /* Align tiles to the start of the container */
   margin-bottom: 20px;
 }
-
 .group {
   float: left;
   border: 2px solid black;
   border-radius: 12px;
-  margin: 5px 10px 10px;
+  margin: 10px 10px 10px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -14,11 +18,11 @@
   align-items: flex-start;
   background-color: white;
   color: black;
-  width: 150px;
+  width: 100px;
   height: 100px;
   overflow: hidden;
-  position: relative; 
-  cursor: pointer; 
+  position: relative; /* Add position relative for child elements */
+  cursor: pointer; /* Add cursor pointer to indicate clickable */
 }
 
 /* Flip animation */
@@ -31,20 +35,20 @@
     transform: rotateY(0deg);
   }
   to {
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
   }
 }
 
 .text {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 15px;
   font-family: "Microsoft Yahei";
   color: rgb(250, 248, 248);
   overflow: hidden;
 }
 
 .state-text {
-  font-size: 17px;
+  font-size: 15px;
   margin-left: 10px;
   color: rgb(250, 248, 248);
 }
@@ -74,11 +78,10 @@
 }
 
 .group.media-player {
-  background-color: #8a7979;
+  background-color: #776868;
 }
 
 .media-player-tile {
-  text: none;
   display: block;
   flex-direction: row;
   align-items: center;
@@ -86,35 +89,40 @@
   border-radius: 12px;
   padding: 10px;
   background-color: rgb(2, 29, 34);
-  width: 370px;
+  width: 200px;
   height: 100px;
   overflow: hidden;
 }
 
-.media-player-tile .album-art {
-  width: 100px;
-  height: 100px;
-  float: left;
+
+
+.media-player-tile {
+  font-size: 12px;
+  position: relative; /* Ensure relative positioning for absolute positioning of elements inside */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.media-player-tile .media-title {
-  text-align: right;
-  color: rgb(250, 248, 248);
+.media-friendly-name {
+  font-size: 12px;
+  position: absolute;
+  top: 10px; /* Adjust top position to your liking */
+  left: 10px; /* Adjust left position to your liking */
+  font-weight: bold;
+  color: white; /* Example color for the friendly name */
 }
 
-.media-player-tile .media-artist {
-  text-align: right;
-  color: rgb(250, 248, 248);
+.media-state {
+  position: absolute;
+  font-size: 12px;
+  bottom: 10px; /* Adjust bottom position to your liking */
+  left: 10px; /* Adjust left position to your liking */
+  font-style: italic;
+  color: white; /* Example color for the state */
 }
 
-.media-player-tile .media-album {
-  margin-bottom: 5px;
-  color: rgb(250, 248, 248);
-  margin-right: 10px;
-  text-align: right;
-}
-
-
+/* Adjustments for consistent spacing */
 .group:not(:last-child) {
   margin-right: 20px;
 }
