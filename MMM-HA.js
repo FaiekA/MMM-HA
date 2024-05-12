@@ -43,7 +43,8 @@ Module.register("MMM-HA", {
         "light": {
             "on": "ha-light-on",
             "off": "ha-light-off",
-            "default": "ha-default"
+            "default": "ha-default",
+            "unavailable": "ha-default"            
         },
         "sensor": {
             "on": "ha-online",
@@ -59,7 +60,8 @@ Module.register("MMM-HA", {
             "8": "ha-number-eight",                       
             "standby": "ha-standby",
             "heating": "ha-heating",            
-            "default": "ha-default"
+            "default": "ha-default",
+            "unavailable": "ha-default"            
         },
         "binary": {
             "on": "ha-online",
@@ -96,12 +98,12 @@ Module.register("MMM-HA", {
 
         "input_boolean": {
             "on": "ha-boolean-on",
-            "off": "ha-switch-off",
+            "off": "ha-boolean-off",
             "default": "ha-default"
         },
         "script": {
             "on": "ha-script",
-            "off": "ha-switch-off"         
+            "off": "ha-script-off"         
         }
     },
 
@@ -357,7 +359,7 @@ Module.register("MMM-HA", {
             // Send notification to WebSocket in Home Assistant to execute the script
             // Implement your logic here
             console.log("Calling WebSocket to execute script: ", entityId);
-            this.sendSocketNotification('HA_RUN_SCRIPT', {
+            this.sendSocketNotification('HA_EXECUTE_SCRIPT', {
                 baseUrl: this.url,
                 accessToken: this.config.accessToken, 
                 equipType: equipType, 
