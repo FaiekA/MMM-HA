@@ -518,14 +518,3 @@ Module.register("MMM-HA", {
     },
 
 });
-
-
-
-
-
-
-
-
-
-
-
