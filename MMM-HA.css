@@ -1,33 +1,45 @@
-
-.wrapper {
+/* Styling for .ha-wrapper */
+.ha-wrapper {
   display: flex;
-  flex-wrap: wrap; /* Allow tiles to wrap to the next line */
-  justify-content: flex-start; /* Align tiles at the start of the container */
-  align-items: flex-start; /* Align tiles to the start of the container */
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  flex-grow: 1;
+  bottom: -100%; /* Start from outside the screen */
+  transition: all ease 0.5s;
 }
-.group {
-  float: left;
-  border: 2px solid black;
-  border-radius: 12px;
-  margin: 10px 10px 10px;
-  padding: 10px;
+
+.ha-wrapper.show {
+  bottom: 0; /* Slide in from the bottom when .show class is applied */
+}
+
+/* Styling for .ha-container-menu-toggle */
+.ha-container-menu-toggle {
+  width: 70px;
+  height: 70px;
+  margin: 0 0 0 20px;
+  cursor: pointer;
+  z-index: 999;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  background-color: white;
-  color: black;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  position: relative; /* Add position relative for child elements */
-  cursor: pointer; /* Add cursor pointer to indicate clickable */
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 5%; /* Position relative to the bottom of the viewport */
+  left: 39%; /* Position horizontally centered */
+  visibility: visible !important;
+}
+
+/* Menu toggle button icon styles */
+.ha-container-menu-toggle img {
+  width: 100%;
+  height: auto;
 }
 
 /* Flip animation */
 .group.flip {
-  animation: flipAnimation 0.4s;
+  animation: flipAnimation 0.8s;
 }
 
 @keyframes flipAnimation {
@@ -39,90 +51,78 @@
   }
 }
 
-.text {
-  font-weight: bold;
-  font-size: 15px;
-  font-family: "Microsoft Yahei";
-  color: rgb(250, 248, 248);
-  overflow: hidden;
-}
-
-.state-text {
-  font-size: 15px;
-  margin-left: 10px;
-  color: rgb(250, 248, 248);
-}
-
-.switch {
-  margin-left: 10px;
-}
-
-.light.off {
-  background-color: #f09e07;
-}
-
-.light.on {
-  background-color: #f9eb25;
-}
-
-.switch.off {
-  background-color: #64b5f6;
-}
-
-.switch.on {
-  background-color: #9e09e4;
-}
-
-.group.sensor {
-  background-color: rgb(45, 189, 45);
-}
-
-.group.media-player {
-  background-color: #776868;
-}
-
-.media-player-tile {
-  display: block;
-  flex-direction: row;
-  align-items: center;
-  border: 2px solid black;
-  border-radius: 12px;
-  padding: 10px;
-  background-color: rgb(2, 29, 34);
-  width: 200px;
-  height: 100px;
-  overflow: hidden;
-}
-
-
-
-.media-player-tile {
-  font-size: 12px;
-  position: relative; /* Ensure relative positioning for absolute positioning of elements inside */
+.group {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px; /* Adjust the margin between icons */
+  margin-bottom: 20px; /* Adjust the margin between rows */
+}
+/* Icon styles for groups */
+.group .icon {
+  width: 90px; /* Adjust the width of the icons */
+  height: 90px; /* Adjust the height of the icons */
+  margin-right: 20px; /* Adjust the margin between icons */
+  margin-bottom: 20px; /* Adjust the margin between rows */
+}
+.group .text {
+  font-size: 14px; /* Adjust the font size of the text */
+  font-weight: bold;  
 }
 
-.media-friendly-name {
-  font-size: 12px;
-  position: absolute;
-  top: 10px; /* Adjust top position to your liking */
-  left: 10px; /* Adjust left position to your liking */
+/* Icon styles for media player tiles */
+.media-player-tile .media-icon {
+  width: 90px; /* Adjust the width of the icons */
+  height: 90px; /* Adjust the height of the icons */
+  margin-right: 40px; /* Adjust the margin between icons */
+  margin-bottom: 40px; /* Adjust the margin between rows */
+}
+
+/* Other styles for modules and buttons */
+/* Add your styles here */
+/* Module styles */
+.ha-module {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Module title styles */
+.ha-module-title {
+  font-size: 14px;
   font-weight: bold;
-  color: white; /* Example color for the friendly name */
+  margin-bottom: 5px;
 }
 
-.media-state {
-  position: absolute;
-  font-size: 12px;
-  bottom: 10px; /* Adjust bottom position to your liking */
-  left: 10px; /* Adjust left position to your liking */
-  font-style: italic;
-  color: white; /* Example color for the state */
+/* Button styles */
+.ha-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* Adjustments for consistent spacing */
-.group:not(:last-child) {
-  margin-right: 20px;
+/* Button hover styles */
+.ha-button:hover {
+  background-color: #0056b3;
+}
+
+/* Button disabled styles */
+.ha-button:disabled {
+  background-color: #bfbfbf;
+  cursor: not-allowed;
+}
+
+/* Button primary styles */
+.ha-button-primary {
+  background-color: #28a745;
+}
+
+/* Button danger styles */
+.ha-button-danger {
+  background-color: #dc3545;
 }

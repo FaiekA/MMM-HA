@@ -3,8 +3,10 @@
 	"off": "Off",
     "someone moving": "Motion",
     "com.disneyplus.mea": "Disney+",
+	"com.netflix.ninja" : "Netflix",
+	"com.showmax.showmax.google": "Showmax",
 	"com.google.android.youtube.tv": "YouTube",
-	"unavailable": "Off",
+	"unavailable": "Offline",
 	"com.google.android.tvlauncher": "Main Menu",
 	"com.google.android.apps.tv.launcherx":"Main Menu"
 }
