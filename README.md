@@ -6,11 +6,14 @@ WIP - TESTING - hobbyist.
 css changes  - Lights and Switches tiles change color when turned on - flips as well as a visual indicator 
 
 Issues : CSS in diffent regions
-	 Media player entity image 
+  	 Scripts 
+    
+Entities added : lights,Switches,Sensors,Binary Sensors,Booleans,singel icon entities, custom icon entities
 
-To Do  : Add entity - covers
+To Do  : Add entity - covers ..........
 
-HomeAssistant frontend module for [MagicMirror²](https://github.com/MichMich/MagicMirror).
+![Screenshot](https://github.com/FaiekA/MMM-HA/assets/52759676/8cdc7862-386e-4bea-b030-78482745ece8)
+
 
 
 ![Screenshot](https://github.com/FaiekA/MMM-HA/assets/52759676/ca39ae47-ac70-42e1-9810-c8f83544dc0d)
@@ -28,17 +31,46 @@ HomeAssistant frontend module for [MagicMirror²](https://github.com/MichMich/Ma
 		{
 			module: "MMM-HA",
 			position: "center",
+			animateIn: 'backInDown',
+			animateOut: 'backOutUp',				
 			config: {
-			  host: "<192.168.0.1>",
-			  port: 8123,
-			  accessToken: "",
-			  entities: [""
+				host: "IP",
+				port: 8123,
+				accessToken: "secret longlived token",
+				entitiesWithDegreeSymbol: ["sensor.openweathermap_temperature"],
+				entities: [
+					"light.kitchen_counter",
+					"sensor.lights_on",
+					"light.passage",
+					"binary_sensor.hass_online",
+					"switch.main_patio_detect",
+					"script.spotify_play",
+					"input_boolean.hyper_hdr",
+					{ // Entity with custom icons
+						entity: "binary_sensor.cctv_online",
+								"icon-off": "ha-cctv-off",
+								"icon-on": "ha-cctv-on"
+					},
 
-						],
-			  mediaPlayerEntities: ["",			  			
-					]
-			}   
-		  },
+					{   entity: "input_boolean.guest_mode",
+								"icon-off": "ha-guest-off",
+								"icon-on": "ha-guest-on"
+					},
+
+					{   entity: "device_tracker.faiek_s_fold",
+								"icon": "ha-bell",	
+					}											
+					
+				
+					
+				],
+				mediaPlayerEntities: [
+					"media_player.spotify_woftxdpkt13crxrjill0b90ie",
+
+				],
+				customIconPath: "http://IP:8080/modules/MMM-HA/icons/"				
+			}
+		},
 ```
 ## The MIT License (MIT)
 
