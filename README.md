@@ -54,8 +54,18 @@ To Do  : Add entity - covers ..........
 					},
 
 					{   entity: "device_tracker.faiek_s_fold",
-								"icon": "ha-bell",	
-					}											
+								"home": "ha-home",
+								"not_home": "ha-not-home"
+					},
+
+					{   entity: "binary_sensor.hass_online",
+								"icon-off": "ha-server-off",
+								"icon-on": "ha-server-on"
+					},					
+
+					{   entity: "sensor.openweathermap_temperature",
+								"icon": "ha-temp"	
+					},										
 					
 				
 					
