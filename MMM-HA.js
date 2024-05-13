@@ -104,7 +104,12 @@ Module.register("MMM-HA", {
         "script": {
             "on": "ha-script",
             "off": "ha-script-off"         
-        }
+        },
+        "device_tracker": {
+            "home": "ha-home",
+            "not_home": "ha-not-home",
+            "default": "ha-default"
+        }       
     },
 
     start: function () {
@@ -172,8 +177,12 @@ Module.register("MMM-HA", {
         // Filter input boolean entities based on the 'entities' array in the configuration
         this.inputBooleanData = this.equipData.filter(entity => entity.entity_id.startsWith("input_boolean."));
     
+        // Filter device tracker entities based on the 'entities' array in the configuration
+        this.deviceTrackerData = this.equipData.filter(entity => entity.entity_id.startsWith("device_tracker."));
+    
         this.updateDom();
     },
+    
     
 
     loadIcons: function () {
@@ -331,7 +340,18 @@ Module.register("MMM-HA", {
                 wrapper.appendChild(group);
             });
         }
-    
+
+        // Render grouped entities (device trackers)
+        if (Array.isArray(this.equipData)) {
+            this.equipData.forEach(equip => {
+                var type = this.getEntityType(equip.entity_id);
+                if (type === "device_tracker") {
+                    var group = this.makeGroup(equip.entity_id, equip.attributes.friendly_name, equip.state, type);
+                    wrapper.appendChild(group);
+                }
+            });
+        }
+
         // Render media player tiles
         if (Array.isArray(this.mediaPlayerData)) {
             this.mediaPlayerData.forEach(mediaPlayer => {
@@ -391,6 +411,7 @@ Module.register("MMM-HA", {
         } else if (this.iconPaths[type] && this.iconPaths[type][state]) {
             icon.src = this.iconPaths[type][state].src; // Use default icon for specific entity type and state
         }
+        
     
         icon.className = "icon";
     
@@ -514,6 +535,8 @@ Module.register("MMM-HA", {
             return "input_boolean";
         } else if (entityId.startsWith("script.")) {
             return "script";
+        } else if (entityId.startsWith("device_tracker.")) {
+            return "device_tracker";
         } else {
             return "unknown.";
         }
