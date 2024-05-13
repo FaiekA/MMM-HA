@@ -15,10 +15,6 @@ To Do  : Add entity - covers ..........
 ![Screenshot](https://github.com/FaiekA/MMM-HA/assets/52759676/8cdc7862-386e-4bea-b030-78482745ece8)
 
 
-
-![Screenshot](https://github.com/FaiekA/MMM-HA/assets/52759676/ca39ae47-ac70-42e1-9810-c8f83544dc0d)
-
-
 ## Installation
 
 1. Navigate into your MagicMirror `modules` folder and execute<br>
